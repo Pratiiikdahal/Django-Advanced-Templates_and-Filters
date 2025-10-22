@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%load static%}
+{%block title_name%}Form{% endblock %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    </head>
+    <body>
+
+    <div class='container'>
+        <form action='' method='post'>
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type='submit'> Submit </button>
+        </form>
+    </div>
+    <script src="" async defer></script>
+    </body>
+</html>

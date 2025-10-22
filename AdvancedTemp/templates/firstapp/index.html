@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Django Session 6</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href={% static 'css/index.css' %}>
+    </head>
+    <body>
+        <h1>Hello Welcome !<h1>
+        {% load cust_temp %}
+        {% for employee in emp_data %}
+            {{employee.fname | f3upper}} {{employee.lname}}<br>
+            {{employee.email}} 
+            {{employee.phone}}
+            {{employee.hire_date}}
+            {{employee.job_title}}
+            {{employee.job_title}}
+            {{employee.is_active}}
+        {% endfor %}
+        <script src="" async defer></script>
+    </body>
+</html>
