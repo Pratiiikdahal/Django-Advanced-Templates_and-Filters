@@ -22,7 +22,12 @@ def formIndex(request):
 
 
 def business(request):
-    return render(request,'firstapp/business.html')
+    count=int(request.COOKIES.get('count',0))
+    new=count+1
+    context={'new':new}
+    response=render(request,'firstapp/business.html',context=context)
+    response.set_cookie('count',new,max_age=60)
+    return response
 
 def info(request):
     return render(request,'firstapp/info.html')
